@@ -1,4 +1,12 @@
 
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('fonts/Norse-Bold.woff2') format('woff2'),
+        url('fonts/Norse-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
 
@@ -36,6 +44,17 @@ body {
   margin: 0;
 }
 
+#footer {
+  color: white;
+  font-weight: 100;
+  align-self: center;
+  font-size: 12px;
+}
+
+a {
+  color: white;
+}
+
 #form-container {
   display: flex;
   flex-direction: column;
@@ -43,11 +62,38 @@ body {
   height: 100vh;
 }
 
+
 #image-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20vh;
   background-image: url(./background.avif);
   background-size: cover;
   height: 100vh;
   width: 40vw;
+  justify-content: space-between;
+}
+
+div#odin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+img {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: 100px;
+}
+
+div#odin>p {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Norse Bold';
+  font-size: 70px;
+  color: white;
 }
 
 #form-header {
@@ -81,7 +127,7 @@ div.col {
   flex-direction: column;
 }
 
-p {
+div#form-header>p {
   padding: 0px 0px 0px 30px;
   font-size: 100%;
   font-weight: 600;
@@ -113,9 +159,20 @@ input[required]:valid {
 
 div#button {
   display: flex;
+  flex-direction: column;
   background-color: var(--grey-form);
   flex: 1 1 auto;
   justify-content: flex-start;
+}
+
+div#button>p {
+  margin: 0 0 0 40px;
+}
+
+a#login {
+  font-weight: 500;
+  text-decoration-line: none;
+  color: #596D48;
 }
 
 h2 {
@@ -138,10 +195,10 @@ button[type="submit"] {
   background-color: #596D48;
   color: white;
   border: hidden;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   box-shadow: 0px 2px 5px black;
-  height: 3rem;
-  width: 10rem;
+  height: 2.5rem;
+  width: 12rem;
   margin: 40px;
 }
 
