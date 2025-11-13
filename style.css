@@ -1,0 +1,151 @@
+
+
+:root {
+
+  --grey-form : rgb(250, 250, 250);
+
+  font-family: system-ui, Roboto, Oxygen, Ubuntu, 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+
+button,
+input
+{
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div,
+form,
+h2,
+fieldset {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100vh;
+}
+
+#image-container {
+  background-image: url(./background.avif);
+  background-size: cover;
+  height: 100vh;
+  width: 40vw;
+}
+
+#form-header {
+  display: flex;
+  flex: 1 1 auto;
+  background-color: var(--grey-form);
+  align-items: center;
+}
+
+
+form {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgb(82, 82, 82);
+}
+
+div.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.col {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+p {
+  padding: 0px 0px 0px 30px;
+  font-size: 100%;
+  font-weight: 600;
+  width: 45ch;
+}
+
+input {
+  flex: 1 0 auto;
+  width: 20vw;
+  border: 1px solid #E5E7EB;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 1px 1px 2px grey;
+  border-radius: 3px;
+  border: 1px solid rgb(56, 56, 255);
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input[required]:valid {
+  border: 1px solid green;
+}
+
+div#button {
+  display: flex;
+  background-color: var(--grey-form);
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+
+h2 {
+  font-weight: 450;
+  padding: 10px 0px 0px 30px;
+  margin: 0;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 0px hidden grey;
+  box-shadow: 0px 5px 10px #e4e1e1;
+  padding: 20px 0px 20px 30px;
+  margin: 0 0 5px 0;
+  gap: 7px;
+}
+
+button[type="submit"] {
+  background-color: #596D48;
+  color: white;
+  border: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 5px black;
+  height: 3rem;
+  width: 10rem;
+  margin: 40px;
+}
+
+button[type="submit"]:active {
+  box-shadow: 0 0 #666;
+  transform: translateY(4px);
+}
